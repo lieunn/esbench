@@ -20,13 +20,13 @@ above), but I really think for now you are best off with 'dev'.
 
 Quick start
 -----------
-With an instance of elasticsearch running on localhost:9200, do: 
+With an instance of elasticsearch running on iadesapp0-0:10004, do: 
 
-	esbench run
+	esbench run --host iadesapp0-0 --port 10004
 	
 When the bench run has finished, you can review the results with: 
 
-	esbench show
+	esbench show --host iadesapp0-0 --port 10004
 
 To get help: 
 	
