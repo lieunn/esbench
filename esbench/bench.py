@@ -234,7 +234,8 @@ class Observation(object):
         try:
             resp = cluster_f(self.conn)
             cluster_stats = json.loads(resp.data)
-            cluster_stats['node_count'] = len(cluster_stats['nodes'].keys())
+            #cluster_stats['node_count'] = len(cluster_stats['nodes'].keys())
+	    cluster_stats['node_count'] = cluster_stats['nodes']['count']['total']
 
             # the reason why getting fielddata here is not redundant with the
             # fielddata gathered in _stats is that here information is
@@ -378,6 +379,7 @@ class Benchmark(object):
             resp = cluster_f(self.conn)
             cluster_info = json.loads(resp.data)
             cluster_info['node_count'] = len(cluster_info['nodes'].keys())
+	    #cluster_info['node_count'] = cluster_info['nodes']['count']['total']
 
         except (TypeError, IOError) as exc:
             logger.warning("couldn't get cluster info: %s", exc)
