@@ -1,6 +1,9 @@
 # -*- coding: UTF-8 -*-
 # (c)2013 Mik Kocikowski, MIT License (http://opensource.org/licenses/MIT)
 # https://github.com/mkocikowski/esbench
+# Forked by Tim Banks, of ObjectRocket
+# https://github.com/timbanks/
+
 
 """Code for retrieving, analyzing, and displaying recorded benchmark data. """
 
@@ -208,9 +211,9 @@ FIELDS = (
     "(?!observation.segments.segments)"
         "("
             "(benchmark.meta.benchmark_start)|"
-            "(observation.meta.benchmark_id)|"
-            "(observation.meta.observation_id)|"
-            "(observation.meta.observation_sequence_no)|"
+#            "(observation.meta.benchmark_id)|"
+#            "(observation.meta.observation_id)|"
+#            "(observation.meta.observation_sequence_no)|"
             "(observation.segments.num_committed_segments)|"
             "(observation.segments.num_search_segments)|"
             "(observation.segments.t_optimize_in_millis)|"
